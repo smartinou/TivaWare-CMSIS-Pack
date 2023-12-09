@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<package schemaVersion="1.7.7" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.7/schema/PACK.xsd">
+  <vendor>Texas-Instruments</vendor>
+  <name>CMSIS-TivaWare</name>
+  <description>CMSIS-Pack that allows users to generate and configure TivaWare C Series libraries for TI Cortex-M4 devices and various IDEs.</description>
+  <url></url>
+  <supportContact></supportContact>
+  <license></license>
+  
+  <releases>
+    <release version="2.2.0" date="2020-04-01">
+      View TivaWare for C Series release notes at: https://www.ti.com/lit/ug/spmu299f/spmu299f.pdf?ts=1701581640430
+    </release>
+  </releases>
+
+  <keywords>
+    <!-- keywords for indexing -->
+    <keyword>Texas Instruments</keyword>
+    <keyword>TI</keyword>
+    <keyword>Device Support</keyword>
+    <keyword>Device Family Package Texas Instruments</keyword>
+    <keyword>Tiva C</keyword>
+    <keyword>TivaWare</keyword>
+    <keyword>TM4C</keyword>
+    <keyword>TM4C123</keyword>
+    <keyword>TM4C129</keyword>
+    <keyword>TM4C1294</keyword>
+    <keyword>arm</keyword>
+    <keyword>arm-cortex-m</keyword>
+    <keyword>arm-cortex-m4</keyword>
+  </keywords>
+
+  <taxonomy>
+    <description Cclass="RTOS">Utility libraries</description>
+  </taxonomy>
+
+  <!-- apis section (optional - for Application Programming Interface descriptions) -->
+  <!-- 
+  <apis>
+  </apis>
+  -->
+
+  <!-- boards section (mandatory for Board Support Packs) -->
+  <!-- 
+  <boards>
+  </boards>
+  -->
+
+  <!-- devices section (mandatory for Device Family Packs) -->
+  <!--
+  <devices>
+  </devices>
+  -->
+
+  <!-- examples section (optional for all Software Packs)-->
+  <!--
+  <examples>
+  </examples>
+  -->
+  
+  <!-- conditions section (optional for all Software Packs)-->
+  <conditions>
+    <condition id="Tiva Devices">
+      <description>Conditions required for any component or bundle in this package</description>
+      <require Dfamily="Tiva C Series"/>
+    </condition>
+
+    <condition id="Graphics Library">
+      <description>Conditions required for graphics components</description>
+      <require Cclass="Graphics" Cbundle="Graphics" Cgroup="Core Library"/>
+    </condition>
+
+    <condition id="USB Core Library">
+      <description>Conditions required for USB components</description>
+      <require Cclass="USB" Cbundle="USB" Cgroup="Core Library"/>
+    </condition>
+
+  </conditions>
+
+
+  <!-- component section (optional for all Software Packs)-->
+  <components>
+    <bundle Cbundle="Peripheral drivers" Cclass="Utility" Cversion="2.2.0">
+      <description>TivaWare Peripheral Driver Library</description>
+      <doc>https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-oCcDwnGrsI/2.2.0.295/SW-TM4C-DRL-UG-2.2.0.295.pdf</doc>
+
+      <component Cgroup="Peripheral Driver Library" condition="Tiva Devices">
+        <description>TivaWare Peripheral Driver Library</description>
+        <files>
+        <file category="doc" name="tivaware/driverlib/readme.txt"/>
+        <file category="include" name="tivaware/inc/"/>
+        <file category="header" name="tivaware/driverlib/adc.h"/>
+        <file category="header" name="tivaware/driverlib/aes.h"/>
+        <file category="header" name="tivaware/driverlib/can.h"/>
+        <file category="header" name="tivaware/driverlib/comp.h"/>
+        <file category="header" name="tivaware/driverlib/cpu.h"/>
+        <file category="header" name="tivaware/driverlib/crc.h"/>
+        <file category="header" name="tivaware/driverlib/debug.h"/>
+        <file category="header" name="tivaware/driverlib/des.h"/>
+        <file category="header" name="tivaware/driverlib/eeprom.h"/>
+        <file category="header" name="tivaware/driverlib/emac.h"/>
+        <file category="header" name="tivaware/driverlib/epi.h"/>
+        <file category="header" name="tivaware/driverlib/flash.h"/>
+        <file category="header" name="tivaware/driverlib/fpu.h"/>
+        <file category="header" name="tivaware/driverlib/gpio.h"/>
+        <file category="header" name="tivaware/driverlib/i2c.h"/>
+        <file category="header" name="tivaware/driverlib/interrupt.h"/>
+        <file category="header" name="tivaware/driverlib/lcd.h"/>
+        <file category="header" name="tivaware/driverlib/mpu.h"/>
+        <file category="header" name="tivaware/driverlib/onewire.h"/>
+        <file category="header" name="tivaware/driverlib/hibernate.h"/>
+        <file category="header" name="tivaware/driverlib/pin_map.h"/>
+        <file category="header" name="tivaware/driverlib/pwm.h"/>
+        <file category="header" name="tivaware/driverlib/qei.h"/>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/driverlib/rtos_bindings.h"/>
+        <file category="header" name="tivaware/driverlib/shamd5.h"/>
+        <file category="header" name="tivaware/driverlib/ssi.h"/>
+        <file category="header" name="tivaware/driverlib/sw_crc.h"/>
+        <file category="header" name="tivaware/driverlib/sysctl.h"/>
+        <file category="header" name="tivaware/driverlib/sysexc.h"/>
+        <file category="header" name="tivaware/driverlib/systick.h"/>
+        <file category="header" name="tivaware/driverlib/timer.h"/>
+        <file category="header" name="tivaware/driverlib/uart.h"/>
+        <file category="header" name="tivaware/driverlib/udma.h"/>
+        <file category="header" name="tivaware/driverlib/usb.h"/>
+        <file category="header" name="tivaware/driverlib/watchdog.h"/>
+        <file category="sourceC" name="tivaware/driverlib/adc.c"/>
+        <file category="sourceC" name="tivaware/driverlib/aes.c"/>
+        <file category="sourceC" name="tivaware/driverlib/comp.c"/>
+        <file category="sourceC" name="tivaware/driverlib/cpu.c"/>
+        <file category="sourceC" name="tivaware/driverlib/crc.c"/>
+        <file category="sourceC" name="tivaware/driverlib/eeprom.c"/>
+        <file category="sourceC" name="tivaware/driverlib/emac.c"/>
+        <file category="sourceC" name="tivaware/driverlib/epi.c"/>
+        <file category="sourceC" name="tivaware/driverlib/flash.c"/>
+        <file category="sourceC" name="tivaware/driverlib/fpu.c"/>
+        <file category="sourceC" name="tivaware/driverlib/gpio.c"/>
+        <file category="sourceC" name="tivaware/driverlib/hibernate.c"/>
+        <file category="sourceC" name="tivaware/driverlib/i2c.c"/>
+        <file category="sourceC" name="tivaware/driverlib/interrupt.c"/>
+        <file category="sourceC" name="tivaware/driverlib/lcd.c"/>
+        <file category="sourceC" name="tivaware/driverlib/mpu.c"/>
+        <file category="sourceC" name="tivaware/driverlib/onewire.c"/>
+        <file category="sourceC" name="tivaware/driverlib/pwm.c"/>
+        <file category="sourceC" name="tivaware/driverlib/qei.c"/>
+        <file category="sourceC" name="tivaware/driverlib/shamd5.c"/>
+        <file category="sourceC" name="tivaware/driverlib/ssi.c"/>
+        <file category="sourceC" name="tivaware/driverlib/sw_crc.c"/>
+        <file category="sourceC" name="tivaware/driverlib/sysctl.c"/>
+        <file category="sourceC" name="tivaware/driverlib/systick.c"/>
+        <file category="sourceC" name="tivaware/driverlib/timer.c"/>
+        <file category="sourceC" name="tivaware/driverlib/uart.c"/>
+        <file category="sourceC" name="tivaware/driverlib/udma.c"/>
+        <file category="sourceC" name="tivaware/driverlib/usb.c"/>
+        <file category="sourceC" name="tivaware/driverlib/watchdog.c"/>
+        </files>
+      </component>
+    </bundle>
+
+    <bundle Cbundle="Graphics" Cclass="Graphics" Cversion="2.2.0">
+      <description>TivaWare Graphics Library</description>
+      <doc>https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-oCcDwnGrsI/2.2.0.295/SW-TM4C-GRL-UG-2.2.0.295.pdf</doc>
+
+      <component Cgroup="Core Library" condition="Tiva Devices">
+        <description>Library files</description>
+        <files>
+        <file category="doc" name="tivaware/grlib/readme.txt"/>
+        <file category="header" name="tivaware/grlib/canvas.h"/>
+        <file category="header" name="tivaware/grlib/checkbox.h"/>
+        <file category="header" name="tivaware/grlib/container.h"/>
+        <file category="header" name="tivaware/grlib/grlib.h"/>
+        <file category="header" name="tivaware/grlib/imgbutton.h"/>
+        <file category="header" name="tivaware/grlib/pushbutton.h"/>
+        <file category="header" name="tivaware/grlib/radiobutton.h"/>
+        <file category="header" name="tivaware/grlib/slider.h"/>
+        <file category="header" name="tivaware/grlib/widget.h"/>
+        <file category="sourceC" name="tivaware/grlib/canvas.c"/>
+        <file category="sourceC" name="tivaware/grlib/charmap.c"/>
+        <file category="sourceC" name="tivaware/grlib/checkbox.c"/>
+        <file category="sourceC" name="tivaware/grlib/circle.c"/>
+        <file category="sourceC" name="tivaware/grlib/container.c"/>
+        <file category="sourceC" name="tivaware/grlib/context.c"/>
+        <file category="sourceC" name="tivaware/grlib/image.c"/>
+        <file category="sourceC" name="tivaware/grlib/imgbutton.c"/>
+        <file category="sourceC" name="tivaware/grlib/pushbutton.c"/>
+        <file category="sourceC" name="tivaware/grlib/radiobutton.c"/>
+        <file category="sourceC" name="tivaware/grlib/rectangle.c"/>
+        <file category="sourceC" name="tivaware/grlib/slider.c"/>
+        <file category="sourceC" name="tivaware/grlib/string.c"/>
+        <file category="sourceC" name="tivaware/grlib/widget.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontfixed6x8.c"/>
+        </files>
+      </component>
+
+      <component Cgroup="Display Drivers" condition="Graphics Library">
+        <description>Library-Compatible Display Drivers</description>
+        <files>
+        <file category="sourceC" name="tivaware/grlib/offscr1bpp.c"/>
+        <file category="sourceC" name="tivaware/grlib/offscr4bpp.c"/>
+        <file category="sourceC" name="tivaware/grlib/offscr8bpp.c"/>
+        </files>
+      </component>
+
+      <component Cgroup="CM Fonts" condition="Graphics Library">
+        <description>CM Font files</description>
+        <files>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm12b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm12.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm12i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm14b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm14.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm14i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm16b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm16.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm16i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm18b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm18.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm18i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm20b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm20.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm20i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm22b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm22.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm22i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm24b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm24.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm24i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm26b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm26.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm26i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm28b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm28.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm28i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm30b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm30.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm30i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm32b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm32.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm32i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm34b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm34.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm34i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm36b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm36.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm36i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm38b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm38.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm38i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm40b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm40.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm40i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm42b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm42.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm42i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm44b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm44.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm44i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm46b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm46.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm46i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm48b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm48.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcm48i.c"/>
+        </files>
+      </component>
+
+      <component Cgroup="CMSC Fonts" condition="Graphics Library">
+        <description>CMSC Font files</description>
+        <files>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc12.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc14.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc16.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc18.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc20.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc22.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc24.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc26.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc28.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc30.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc32.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc34.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc36.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc38.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc40.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc42.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc44.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc46.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc48.c"/>
+        </files>
+      </component>
+
+      <component Cgroup="CMSS Fonts" condition="Graphics Library">
+        <description>CMSS Font files</description>
+        <files>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss12.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss12.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss12i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss14b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss14.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss14i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss16b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss16.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss16i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss18b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss18.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss18i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss20b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss20.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss20i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss22b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss22.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss22i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss24b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss24.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss24i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss26b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss26.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss26i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss28b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss28.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss28i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss30b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss30.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss30i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss32b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss32.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss32i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss34b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss34.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss34i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss36b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss36.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss36i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss38b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss38.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss38i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss40b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss40.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss40i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss42b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss42.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss42i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss44b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss44.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss44i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss46b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss46.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss46i.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss48b.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss48.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmss48i.c"/>
+        </files>
+      </component>
+
+      <component Cgroup="CMTT Fonts" condition="Graphics Library">
+        <description>CMTT Font files</description>
+        <files>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt12.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt14.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt16.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt18.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt20.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt22.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt24.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt26.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt28.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt30.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt32.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt34.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt36.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt38.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt40.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt42.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt44.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt46.c"/>
+        <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt48.c"/>
+        </files>
+      </component>
+
+        <!-- Could add graphics controller modules here. -->
+
+    </bundle>
+
+    <bundle Cbundle="Sensor" Cclass="Utility" Cversion="2.2.0">
+      <description>TivaWare Sensor Library</description>
+      <doc>https://www.ti.com/lit/pdf/SPMU371E</doc>
+
+      <component Cgroup="Sensor Library" condition="Tiva Devices">
+        <description>TivaWare Sensor Library</description>
+        <files>
+        <file category="doc" name="tivaware/sensorlib/readme.txt"/>
+        <file category="header" name="tivaware/sensorlib/ak8963.h"/>
+        <file category="header" name="tivaware/sensorlib/ak8975.h"/>
+        <file category="header" name="tivaware/sensorlib/bmp180.h"/>
+        <file category="header" name="tivaware/sensorlib/bq27510g3.h"/>
+        <file category="header" name="tivaware/sensorlib/cm3218.h"/>
+        <file category="header" name="tivaware/sensorlib/comp_dcm.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_ak8963.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_ak8975.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_bmp180.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_bq27510g3.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_cm3218.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_isl29023.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_kxti9.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_l3gd20h.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_lsm303d.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_lsm303dlhc.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_mpu6050.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_mpu9150.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_sht21.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_tmp006.h"/>
+        <file category="header" name="tivaware/sensorlib/hw_tmp100.h"/>
+        <file category="header" name="tivaware/sensorlib/i2cm_drv.h"/>
+        <file category="header" name="tivaware/sensorlib/isl29023.h"/>
+        <file category="header" name="tivaware/sensorlib/kxti9.h"/>
+        <file category="header" name="tivaware/sensorlib/l3gd20h.h"/>
+        <file category="header" name="tivaware/sensorlib/lsm303d.h"/>
+        <file category="header" name="tivaware/sensorlib/lsm303dlhc_accel.h"/>
+        <file category="header" name="tivaware/sensorlib/lsm303dlhc_mag.h"/>
+        <file category="header" name="tivaware/sensorlib/magneto.h"/>
+        <file category="header" name="tivaware/sensorlib/mpu6050.h"/>
+        <file category="header" name="tivaware/sensorlib/mpu9150.h"/>
+        <file category="header" name="tivaware/sensorlib/quaternion.h"/>
+        <file category="header" name="tivaware/sensorlib/sht21.h"/>
+        <file category="header" name="tivaware/sensorlib/tmp006.h"/>
+        <file category="header" name="tivaware/sensorlib/tmp100.h"/>
+        <file category="header" name="tivaware/sensorlib/vector.h"/>
+        <file category="sourceC" name="tivaware/sensorlib/ak8963.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/ak8975.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/bmp180.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/i2cm_drv.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/isl29023.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/kxti9.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/lsm303d.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/lsm303dlhc_accel.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/lsm303dlhc_mag.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/magneto.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/mpu6050.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/mpu9150.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/quaternion.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/sht21.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/tmp006.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/tmp100.c"/>
+        <file category="sourceC" name="tivaware/sensorlib/vector.c"/>
+        </files>
+      </component>
+    </bundle>
+
+    <bundle Cbundle="USB" Cclass="USB" Cversion="2.2.0">
+      <description>TivaWare USB Library</description>
+      <doc>https://www.ti.com/lit/pdf/SPMU297E</doc>
+
+      <component Cgroup="Core Library" condition="Tiva Devices">
+        <description>Core Library</description>
+        <files>
+        <file category="doc" name="tivaware/usblib/readme.txt"/>
+        <file category="header" name="tivaware/usblib/usbaudio.h"/>
+        <file category="header" name="tivaware/usblib/usbcdc.h"/>
+        <file category="header" name="tivaware/usblib/usbdfu.h"/>
+        <file category="header" name="tivaware/usblib/usblib.h"/>
+        <file category="header" name="tivaware/usblib/usblibpriv.h"/>
+        <file category="header" name="tivaware/usblib/usbmsc.h"/>
+        <file category="header" name="tivaware/usblib/usbulpi.h"/>
+        <file category="sourceC" name="tivaware/usblib/usbbuffer.c"/>
+        <file category="sourceC" name="tivaware/usblib/usbdesc.c"/>
+        <file category="sourceC" name="tivaware/usblib/usbdma.c"/>
+        <file category="sourceC" name="tivaware/usblib/usbkeyboardmap.c"/>
+        <file category="sourceC" name="tivaware/usblib/usbmode.c"/>
+        <file category="sourceC" name="tivaware/usblib/usbringbuf.c"/>
+        <file category="sourceC" name="tivaware/usblib/usbtick.c"/>
+        <file category="sourceC" name="tivaware/usblib/usbulpi.c"/>
+        </files>
+      </component>
+
+      <component Cgroup="Device" condition="USB Core Library">
+        <description>Device support</description>
+        <files>
+        <file category="header" name="tivaware/usblib/device/usbdaudio.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdbulk.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdcdc.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdcomp.h"/>
+        <file category="header" name="tivaware/usblib/device/usbddfu-rt.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdevice.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdevicepriv.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdhidgamepad.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdhid.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdhidkeyb.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdhidmouse.h"/>
+        <file category="header" name="tivaware/usblib/device/usbdmsc.h"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdaudio.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdbulk.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdcdc.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdcdesc.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdcomp.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdconfig.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbddfu-rt.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdenum.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdhandler.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdhid.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdhidgamepad.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdhidkeyb.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdhidmouse.c"/>
+        <file category="sourceC" name="tivaware/usblib/device/usbdmsc.c"/>
+        </files>
+      </component>
+
+      <component Cgroup="Host" condition="USB Core Library">
+        <description>Host support</description>
+        <files>
+        <file category="header" name="tivaware/usblib/host/usbhaudio.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhhid.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhhidkeyboard.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhhidmouse.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhhub.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhmsc.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhost.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhostpriv.h"/>
+        <file category="header" name="tivaware/usblib/host/usbhscsi.h"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhaudio.c"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhhid.c"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhhidkeyboard.c"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhhidmouse.c"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhhub.c"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhmsc.c"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhostenum.c"/>
+        <file category="sourceC" name="tivaware/usblib/host/usbhscsi.c"/>
+        </files>
+      </component>
+    </bundle>
+
+<!--
+    <bundle Cbundle="USB" Cclass="USB" Cversion="2.2.0">
+      <description>TivaWare USB Library</description>
+      <doc>https://www.ti.com/lit/pdf/SPMU297E</doc>
+-->
+      <component Cclass="Utility" Cgroup="Utilities Library" Cversion="2.2.0" condition="Tiva Devices">
+        <description>TivaWare Utilities Library</description>
+        <files>
+        <file category="header" name="tivaware/utils/cmdline.h"/>
+        <file category="header" name="tivaware/utils/cpu_usage.h"/>
+        <file category="header" name="tivaware/utils/eeprom_pb.h"/>
+        <file category="header" name="tivaware/utils/flash_pb.h"/>
+        <file category="header" name="tivaware/utils/fswrapper.h"/>
+        <file category="header" name="tivaware/utils/isqrt.h"/>
+        <file category="header" name="tivaware/utils/locator.h"/>
+        <file category="header" name="tivaware/utils/lwiplib.h"/>
+        <file category="header" name="tivaware/utils/ptpdlib.h"/>
+        <file category="header" name="tivaware/utils/random.h"/>
+        <file category="header" name="tivaware/utils/ringbuf.h"/>
+        <file category="header" name="tivaware/utils/scheduler.h"/>
+        <file category="header" name="tivaware/utils/sine.h"/>
+        <file category="header" name="tivaware/utils/smbus.h"/>
+        <file category="header" name="tivaware/utils/softi2c.h"/>
+        <file category="header" name="tivaware/utils/softssi.h"/>
+        <file category="header" name="tivaware/utils/softuart.h"/>
+        <file category="header" name="tivaware/utils/speexlib.h"/>
+        <file category="header" name="tivaware/utils/spi_flash.h"/>
+        <file category="header" name="tivaware/utils/swupdate.h"/>
+        <file category="header" name="tivaware/utils/tftp.h"/>
+        <file category="header" name="tivaware/utils/uartstdio.h"/>
+        <file category="header" name="tivaware/utils/ustdlib.h"/>
+        <file category="header" name="tivaware/utils/wavfile.h"/>
+        <file category="sourceC" name="tivaware/utils/cmdline.c"/>
+        <file category="sourceC" name="tivaware/utils/cpu_usage.c"/>
+        <file category="sourceC" name="tivaware/utils/eeprom_pb.c"/>
+        <file category="sourceC" name="tivaware/utils/flash_pb.c"/>
+        <file category="sourceC" name="tivaware/utils/fswrapper.c"/>
+        <file category="sourceC" name="tivaware/utils/isqrt.c"/>
+        <file category="sourceC" name="tivaware/utils/locator.c"/>
+        <file category="sourceC" name="tivaware/utils/lwiplib.c"/>
+        <file category="sourceC" name="tivaware/utils/ptpdlib.c"/>
+        <file category="sourceC" name="tivaware/utils/random.c"/>
+        <file category="sourceC" name="tivaware/utils/ringbuf.c"/>
+        <file category="sourceC" name="tivaware/utils/scheduler.c"/>
+        <file category="sourceC" name="tivaware/utils/sine.c"/>
+        <file category="sourceC" name="tivaware/utils/smbus.c"/>
+        <file category="sourceC" name="tivaware/utils/softi2c.c"/>
+        <file category="sourceC" name="tivaware/utils/softssi.c"/>
+        <file category="sourceC" name="tivaware/utils/softuart.c"/>
+        <file category="sourceC" name="tivaware/utils/speexlib.c"/>
+        <file category="sourceC" name="tivaware/utils/spi_flash.c"/>
+        <file category="sourceC" name="tivaware/utils/swupdate.c"/>
+        <file category="sourceC" name="tivaware/utils/tftp.c"/>
+        <file category="sourceC" name="tivaware/utils/uartstdio.c"/>
+        <file category="sourceC" name="tivaware/utils/ustdlib.c"/>
+        <file category="sourceC" name="tivaware/utils/wavfile.c"/>
+        </files>
+      </component>
+<!--
+    </bundle>
+-->
+
+  </components>
+  
+  <!-- optional taxonomy section for defining new component Class and Group names -->
+  <!--
+  <taxonomy>
+  </taxonomy>
+  -->
+  
+</package>

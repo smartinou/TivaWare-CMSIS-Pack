@@ -2,7 +2,7 @@
 
 <package schemaVersion="1.7.7" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.7/schema/PACK.xsd">
   <vendor>Texas-Instruments</vendor>
-  <name>CMSIS-TivaWare</name>
+  <name>TivaWare</name>
   <description>CMSIS-Pack that allows users to generate and configure TivaWare C Series libraries for TI Cortex-M4 devices and various IDEs.</description>
   <url></url>
   <supportContact></supportContact>

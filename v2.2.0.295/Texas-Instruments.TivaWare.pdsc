@@ -385,9 +385,6 @@
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt48.c"/>
         </files>
       </component>
-
-        <!-- Could add graphics controller modules here. -->
-
     </bundle>
 
     <bundle Cbundle="Sensor" Cclass="Utility" Cversion="2.2.0">
@@ -541,12 +538,10 @@
       </component>
     </bundle>
 
-<!--
-    <bundle Cbundle="USB" Cclass="USB" Cversion="2.2.0">
+    <bundle Cbundle="Utility" Cclass="Utility" Cversion="2.2.0">
       <description>TivaWare USB Library</description>
       <doc>https://www.ti.com/lit/pdf/SPMU297E</doc>
--->
-      <component Cclass="Utility" Cgroup="Utilities Library" Cversion="2.2.0" condition="Tiva Devices">
+      <component Cgroup="Utilities Library" condition="Tiva Devices">
         <description>TivaWare Utilities Library</description>
         <files>
         <file category="include" name="tivaware/"/>
@@ -600,9 +595,7 @@
         <file category="sourceC" name="tivaware/utils/wavfile.c"/>
         </files>
       </component>
-<!--
     </bundle>
--->
 
   </components>
   

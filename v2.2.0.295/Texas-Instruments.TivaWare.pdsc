@@ -89,7 +89,7 @@
         <description>TivaWare Peripheral Driver Library</description>
         <files>
         <file category="doc" name="tivaware/driverlib/readme.txt"/>
-        <file category="include" name="tivaware/inc/"/>
+        <file category="include" name="tivaware/"/>
         <file category="header" name="tivaware/driverlib/adc.h"/>
         <file category="header" name="tivaware/driverlib/aes.h"/>
         <file category="header" name="tivaware/driverlib/can.h"/>
@@ -168,6 +168,7 @@
         <description>Library files</description>
         <files>
         <file category="doc" name="tivaware/grlib/readme.txt"/>
+        <file category="include" name="tivaware/"/>
         <file category="header" name="tivaware/grlib/canvas.h"/>
         <file category="header" name="tivaware/grlib/checkbox.h"/>
         <file category="header" name="tivaware/grlib/container.h"/>
@@ -198,6 +199,7 @@
       <component Cgroup="Display Drivers" condition="Graphics Library">
         <description>Library-Compatible Display Drivers</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="sourceC" name="tivaware/grlib/offscr1bpp.c"/>
         <file category="sourceC" name="tivaware/grlib/offscr4bpp.c"/>
         <file category="sourceC" name="tivaware/grlib/offscr8bpp.c"/>
@@ -207,6 +209,7 @@
       <component Cgroup="CM Fonts" condition="Graphics Library">
         <description>CM Font files</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcm12b.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcm12.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcm12i.c"/>
@@ -270,6 +273,7 @@
       <component Cgroup="CMSC Fonts" condition="Graphics Library">
         <description>CMSC Font files</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc12.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc14.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmsc16.c"/>
@@ -295,6 +299,7 @@
       <component Cgroup="CMSS Fonts" condition="Graphics Library">
         <description>CMSS Font files</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmss12.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmss12.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmss12i.c"/>
@@ -358,6 +363,7 @@
       <component Cgroup="CMTT Fonts" condition="Graphics Library">
         <description>CMTT Font files</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt12.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt14.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontcmtt16.c"/>
@@ -392,6 +398,7 @@
         <description>TivaWare Sensor Library</description>
         <files>
         <file category="doc" name="tivaware/sensorlib/readme.txt"/>
+        <file category="include" name="tivaware/"/>
         <file category="header" name="tivaware/sensorlib/ak8963.h"/>
         <file category="header" name="tivaware/sensorlib/ak8975.h"/>
         <file category="header" name="tivaware/sensorlib/bmp180.h"/>
@@ -457,6 +464,7 @@
         <description>Core Library</description>
         <files>
         <file category="doc" name="tivaware/usblib/readme.txt"/>
+        <file category="include" name="tivaware/"/>
         <file category="header" name="tivaware/usblib/usbaudio.h"/>
         <file category="header" name="tivaware/usblib/usbcdc.h"/>
         <file category="header" name="tivaware/usblib/usbdfu.h"/>
@@ -478,6 +486,7 @@
       <component Cgroup="Device" condition="USB Core Library">
         <description>Device support</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="header" name="tivaware/usblib/device/usbdaudio.h"/>
         <file category="header" name="tivaware/usblib/device/usbdbulk.h"/>
         <file category="header" name="tivaware/usblib/device/usbdcdc.h"/>
@@ -510,6 +519,7 @@
       <component Cgroup="Host" condition="USB Core Library">
         <description>Host support</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="header" name="tivaware/usblib/host/usbhaudio.h"/>
         <file category="header" name="tivaware/usblib/host/usbhhid.h"/>
         <file category="header" name="tivaware/usblib/host/usbhhidkeyboard.h"/>
@@ -539,6 +549,7 @@
       <component Cclass="Utility" Cgroup="Utilities Library" Cversion="2.2.0" condition="Tiva Devices">
         <description>TivaWare Utilities Library</description>
         <files>
+        <file category="include" name="tivaware/"/>
         <file category="header" name="tivaware/utils/cmdline.h"/>
         <file category="header" name="tivaware/utils/cpu_usage.h"/>
         <file category="header" name="tivaware/utils/eeprom_pb.h"/>

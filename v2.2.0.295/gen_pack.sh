@@ -87,9 +87,9 @@ PACK_DELETE_FILES="
 # Specify patches to be applied
 # Default: empty
 #
-# PACK_PATCH_FILES="
-#     <list patches here>
-# "
+PACK_PATCH_FILES="
+    diff.patch
+"
 
 # Specify addition argument to packchk
 # Default: empty
@@ -130,7 +130,9 @@ function preprocess() {
   cd $TIVAWARE_DIR
 
   # Acquire sources from repos.
+  # Change line ending. Required to apply patch.
   unzip -q -o $HOME/Downloads/SW-TM4C-2.2.0.295.exe
+  find . -type f -print0 | xargs -0 dos2unix -q
 
   cd .. # Back to script calling point.
 

@@ -1,0 +1,12 @@
+--- tivaware/grlib/grlib.h  2023-12-25 09:35:06.316466106 -0500
++++ tivaware/grlib/grlib.h	2023-12-25 17:06:08.220357741 -0500
+@@ -2073,6 +2073,9 @@
+ #include <intrinsics.h>
+ #define NumLeadingZeros(x)      __CLZ(x)
+ #endif
++#if defined(__GNUC__)
++#define NumLeadingZeros(x)      __builtin_clz((unsigned)(x))
++#endif
+ #if defined(codered) || defined(gcc) || defined(sourcerygxx)
+ #define NumLeadingZeros(x) __extension__                                      \
+         ({                                                                    \

@@ -186,6 +186,8 @@
         <file category="sourceC" name="tivaware/grlib/context.c"/>
         <file category="sourceC" name="tivaware/grlib/image.c"/>
         <file category="sourceC" name="tivaware/grlib/imgbutton.c"/>
+        <file category="sourceC" name="tivaware/grlib/line.c"/>
+        <file category="sourceC" name="tivaware/grlib/listbox.c"/>
         <file category="sourceC" name="tivaware/grlib/pushbutton.c"/>
         <file category="sourceC" name="tivaware/grlib/radiobutton.c"/>
         <file category="sourceC" name="tivaware/grlib/rectangle.c"/>

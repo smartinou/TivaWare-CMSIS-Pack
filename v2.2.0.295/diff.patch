@@ -10,3 +10,14 @@
  #if defined(codered) || defined(gcc) || defined(sourcerygxx)
  #define NumLeadingZeros(x) __extension__                                      \
          ({                                                                    \
+--- tivaware/grlib/widget.c	2024-02-17 16:22:55.015979484 -0500
++++ tivaware/grlib/widget.c	2024-02-04 10:25:57.303590399 -0500
+@@ -258,7 +258,7 @@
+ }
+ #pragma diag_default=Pe940
+ #endif
+-#if defined(codered) || defined(__GNUC__) || defined(sourcerygxx)
++#if defined(codered) || defined(gcc) || defined(sourcerygxx)
+ uint32_t __attribute__((naked))
+ WidgetMutexGet(uint8_t *pi8Mutex)
+ {

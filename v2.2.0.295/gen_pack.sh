@@ -87,9 +87,9 @@ PACK_DELETE_FILES="
 # Specify patches to be applied
 # Default: empty
 #
-PACK_PATCH_FILES="
-    diff.patch
-"
+#PACK_PATCH_FILES="
+#    diff.patch
+#"
 
 # Specify addition argument to packchk
 # Default: empty

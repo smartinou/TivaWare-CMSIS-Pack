@@ -196,6 +196,11 @@
         <file category="sourceC" name="tivaware/grlib/widget.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontfixed6x8.c"/>
         </files>
+        <Pre_Include_Local_Component_h>
+          #if defined(__GNUC__)
+            #define gcc
+          #endif
+        </Pre_Include_Local_Component_h>
       </component>
 
       <component Cgroup="Display Drivers" condition="Graphics Library">

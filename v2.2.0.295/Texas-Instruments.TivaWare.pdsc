@@ -31,6 +31,12 @@
     <keyword>arm-cortex-m4</keyword>
   </keywords>
 
+  <requirements>
+    <packages>
+      <package name="TM4C_DFP" vendor="Keil" version="1.1.0:1.1.0"/>
+    </packages>
+  </requirements>
+
   <taxonomy>
     <description Cclass="RTOS">Utility libraries</description>
   </taxonomy>
@@ -64,6 +70,16 @@
     <condition id="Tiva Devices">
       <description>Conditions required for any component or bundle in this package</description>
       <require Dfamily="Tiva C Series"/>
+    </condition>
+
+    <condition id="TM4C123x Series">
+      <description>Conditions required for ROM component</description>
+      <require DsubFamily="TM4C123x Series"/>
+    </condition>
+
+    <condition id="TM4C129x Series">
+      <description>Conditions required for ROM component</description>
+      <require DsubFamily="TM4C129x Series"/>
     </condition>
 
     <condition id="Graphics Library">
@@ -103,7 +119,6 @@
         <file category="header" name="tivaware/driverlib/epi.h"/>
         <file category="header" name="tivaware/driverlib/flash.h"/>
         <file category="header" name="tivaware/driverlib/fpu.h"/>
-        <file category="header" name="tivaware/driverlib/gpio.h"/>
         <file category="header" name="tivaware/driverlib/i2c.h"/>
         <file category="header" name="tivaware/driverlib/interrupt.h"/>
         <file category="header" name="tivaware/driverlib/lcd.h"/>
@@ -137,7 +152,6 @@
         <file category="sourceC" name="tivaware/driverlib/epi.c"/>
         <file category="sourceC" name="tivaware/driverlib/flash.c"/>
         <file category="sourceC" name="tivaware/driverlib/fpu.c"/>
-        <file category="sourceC" name="tivaware/driverlib/gpio.c"/>
         <file category="sourceC" name="tivaware/driverlib/hibernate.c"/>
         <file category="sourceC" name="tivaware/driverlib/i2c.c"/>
         <file category="sourceC" name="tivaware/driverlib/interrupt.c"/>
@@ -157,6 +171,263 @@
         <file category="sourceC" name="tivaware/driverlib/usb.c"/>
         <file category="sourceC" name="tivaware/driverlib/watchdog.c"/>
         </files>
+      </component>
+
+      <component Cgroup="Silicon Revision" Csub="TM4C123x Silicon" Cvariant="Revision 2" condition="TM4C123x Series">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C123_RA1
+        </Pre_Include_Global_h>
+      </component>
+      <component Cgroup="Silicon Revision" Csub="TM4C123x Silicon" Cvariant="Revision 3" condition="TM4C123x Series">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C123_RA2
+        </Pre_Include_Global_h>
+      </component>
+      <component Cgroup="Silicon Revision" Csub="TM4C123x Silicon" Cvariant="Revision 4" condition="TM4C123x Series">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C123_RA3
+        </Pre_Include_Global_h>
+      </component>
+      <component Cgroup="Silicon Revision" Csub="TM4C123x Silicon" Cvariant="Revision 5" condition="TM4C123x Series">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C123_RB0
+        </Pre_Include_Global_h>
+      </component>
+      <component Cgroup="Silicon Revision" Csub="TM4C123x Silicon" Cvariant="Revision 6" condition="TM4C123x Series" isDefaultVariant="true">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C123_RB1
+        </Pre_Include_Global_h>
+      </component>
+      <component Cgroup="Silicon Revision" Csub="TM4C123x Silicon" Cvariant="Revision 7" condition="TM4C123x Series">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C123_RB1
+        </Pre_Include_Global_h>
+      </component>
+
+      <component Cgroup="Silicon Revision" Csub="TM4C129x Silicon" Cvariant="Revision 1" condition="TM4C129x Series">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C129_RA0
+        </Pre_Include_Global_h>
+      </component>
+      <component Cgroup="Silicon Revision" Csub="TM4C129x Silicon" Cvariant="Revision 2" condition="TM4C129x Series">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C129_RA1
+        </Pre_Include_Global_h>
+      </component>
+      <component Cgroup="Silicon Revision" Csub="TM4C129x Silicon" Cvariant="Revision 3" condition="TM4C129x Series" isDefaultVariant="true">
+        <description>Silicon revision for selection of ROM functions</description>
+        <files>
+        <file category="header" name="tivaware/driverlib/rom.h"/>
+        <file category="header" name="tivaware/driverlib/rom_map.h"/>
+        <file category="header" name="tivaware/inc/hw_ints.h"/>
+        </files>
+        <Pre_Include_Global_h>
+          #define TARGET_IS_TM4C129_RA2
+        </Pre_Include_Global_h>
+      </component>
+
+      <component Cgroup="GPIO Driver Library" condition="Tiva Devices">
+        <description>GPIO Peripheral Driver Library</description>
+        <files>
+        <file category="doc" name="tivaware/driverlib/readme.txt"/>
+        <file category="include" name="tivaware/"/>
+        <file category="header" name="tivaware/driverlib/gpio.h"/>
+        <file category="sourceC" name="tivaware/driverlib/gpio.c"/>
+        </files>
+        <Pre_Include_Global_h>
+          // Some headers require specific includes.
+          #if   defined(TM4C1230C3PM)
+            #define PART_TM4C1230C3PM
+          #elif defined(TM4C1230D5PM)
+            #define PART_TM4C1230D5PM
+          #elif defined(TM4C1230E6PM)
+            #define PART_TM4C1230E6PM
+          #elif defined(TM4C1230H6PM)
+            #define PART_TM4C1230H6PM
+          #elif defined(TM4C1231C3PM)
+            #define PART_TM4C1231C3PM
+          #elif defined(TM4C1231D5PM)
+            #define PART_TM4C1231D5PM
+          #elif defined(TM4C1231D5PZ)
+            #define PART_TM4C1231D5PZ
+          #elif defined(TM4C1231E6PM)
+            #define PART_TM4C1231E6PM
+          #elif defined(TM4C1231E6PZ)
+            #define PART_TM4C1231E6PZ
+          #elif defined(TM4C1231H6PM)
+            #define PART_TM4C1231H6PM
+          #elif defined(TM4C1231H6PZ)
+            #define PART_TM4C1231H6PZ
+          #elif defined(TM4C1232C3PM)
+            #define PART_TM4C1232C3PM
+          #elif defined(TM4C1232D5PM)
+            #define PART_TM4C1232D5PM
+          #elif defined(TM4C1232E6PM)
+            #define PART_TM4C1232E6PM
+          #elif defined(TM4C1232H6PM)
+            #define PART_TM4C1232H6PM
+          #elif defined(TM4C1233C3PM)
+            #define PART_TM4C1233C3PM
+          #elif defined(TM4C1233D5PM)
+            #define PART_TM4C1233D5PM
+          #elif defined(TM4C1233D5PZ)
+            #define PART_TM4C1233D5PZ
+          #elif defined(TM4C1233E6PM)
+            #define PART_TM4C1233E6PM
+          #elif defined(TM4C1233E6PZ)
+            #define PART_TM4C1233E6PZ
+          #elif defined(TM4C1233H6PM)
+            #define PART_TM4C1233H6PM
+          #elif defined(TM4C1233H6PZ)
+            #define PART_TM4C1233H6PZ
+          #elif defined(TM4C1236D5PM)
+            #define PART_TM4C1236D5PM
+          #elif defined(TM4C1236E6PM)
+            #define PART_TM4C1236E6PM
+          #elif defined(TM4C1236H6PM)
+            #define PART_TM4C1236H6PM
+          #elif defined(TM4C1237D5PM)
+            #define PART_TM4C1237D5PM
+          #elif defined(TM4C1237D5PZ)
+            #define PART_TM4C1237D5PZ
+          #elif defined(TM4C1237E6PM)
+            #define PART_TM4C1237E6PM
+          #elif defined(TM4C1237E6PZ)
+            #define PART_TM4C1237E6PZ
+          #elif defined(TM4C1237H6PM)
+            #define PART_TM4C1237H6PM
+          #elif defined(TM4C1237H6PZ)
+            #define PART_TM4C1237H6PZ
+          #elif defined(TM4C123AE6PM)
+            #define PART_TM4C123AE6PM
+          #elif defined(TM4C123AH6PM)
+            #define PART_TM4C123AH6PM
+          #elif defined(TM4C123BE6PM)
+            #define PART_TM4C123BE6PM
+          #elif defined(TM4C123BE6PZ)
+            #define PART_TM4C123BE6PZ
+          #elif defined(TM4C123BH6PM)
+            #define PART_TM4C123BH6PM
+          #elif defined(TM4C123BH6PZ)
+            #define PART_TM4C123BH6PZ
+          #elif defined(TM4C123FE6PM)
+            #define PART_TM4C123FE6PM
+          #elif defined(TM4C123FH6PM)
+            #define PART_TM4C123FH6PM
+          #elif defined(TM4C123GE6PM)
+            #define PART_TM4C123GE6PM
+          #elif defined(TM4C123GE6PZ)
+            #define PART_TM4C123GE6PZ
+          #elif defined(TM4C123GH6PM)
+            #define PART_TM4C123GH6PM
+          #elif defined(TM4C123GH6PZ)
+            #define PART_TM4C123GH6PZ
+          #elif defined(TM4C1231H6PGE)
+            #define PART_TM4C1231H6PGE
+          #elif defined(TM4C1233H6PGE)
+            #define PART_TM4C1233H6PGE
+          #elif defined(TM4C1237H6PGE)
+            #define PART_TM4C1237H6PGE
+          #elif defined(TM4C123BH6PGE)
+            #define PART_TM4C123BH6PGE
+          #elif defined(TM4C123BH6ZRB)
+            #define PART_TM4C123BH6ZRB
+          #elif defined(TM4C123GH6PGE)
+            #define PART_TM4C123GH6PGE
+          #elif defined(TM4C123GH6ZRB)
+            #define PART_TM4C123GH6ZRB
+          #elif defined(TM4C123GH6ZXR)
+            #define PART_TM4C123GH6ZXR
+          #elif defined(TM4C1290NCPDT)
+            #define PART_TM4C1290NCPDT
+          #elif defined(TM4C1290NCZAD)
+            #define PART_TM4C1290NCZAD
+          #elif defined(TM4C1292NCPDT)
+            #define PART_TM4C1292NCPDT
+          #elif defined(TM4C1292NCZAD)
+            #define PART_TM4C1292NCZAD
+          #elif defined(TM4C1294KCPDT)
+            #define PART_TM4C1294KCPDT
+          #elif defined(TM4C1294NCPDT)
+            #define PART_TM4C1294NCPDT
+          #elif defined(TM4C1294NCZAD)
+            #define PART_TM4C1294NCZAD
+          #elif defined(TM4C1297NCZAD)
+            #define PART_TM4C1297NCZAD
+          #elif defined(TM4C1299KCZAD)
+            #define PART_TM4C1299KCZAD
+          #elif defined(TM4C1299NCZAD)
+            #define PART_TM4C1299NCZAD
+          #elif defined(TM4C129CNCPDT)
+            #define PART_TM4C129CNCPDT
+          #elif defined(TM4C129CNCZAD)
+            #define PART_TM4C129CNCZAD
+          #elif defined(TM4C129DNCPDT)
+            #define PART_TM4C129DNCPDT
+          #elif defined(TM4C129DNCZAD)
+            #define PART_TM4C129DNCZAD
+          #elif defined(TM4C129EKCPDT)
+            #define PART_TM4C129EKCPDT
+          #elif defined(TM4C129ENCPDT)
+            #define PART_TM4C129ENCPDT
+          #elif defined(TM4C129ENCZAD)
+            #define PART_TM4C129ENCZAD
+          #elif defined(TM4C129LNCZAD)
+            #define PART_TM4C129LNCZAD
+          #elif defined(TM4C129XKCZAD)
+            #define PART_TM4C129XKCZAD
+          #elif defined(TM4C129XNCZAD)
+            #define PART_TM4C129XNCZAD
+          #endif
+        </Pre_Include_Global_h>
       </component>
     </bundle>
 
@@ -196,11 +467,11 @@
         <file category="sourceC" name="tivaware/grlib/widget.c"/>
         <file category="sourceC" name="tivaware/grlib/fonts/fontfixed6x8.c"/>
         </files>
-        <Pre_Include_Local_Component_h>
+        <Pre_Include_Global_h>
           #if defined(__GNUC__)
             #define gcc
           #endif
-        </Pre_Include_Local_Component_h>
+        </Pre_Include_Global_h>
       </component>
 
       <component Cgroup="Display Drivers" condition="Graphics Library">

@@ -94,7 +94,7 @@ PACK_DELETE_FILES="
 # Specify addition argument to packchk
 # Default: empty
 #
-#PACKCHK_ARGS=()
+PACKCHK_ARGS=(-i ${CMSIS_PACK_ROOT}/Keil/TM4C_DFP/1.1.0/Keil.TM4C_DFP.pdsc)
 
 # Specify additional dependencies for packchk
 # Default: empty
